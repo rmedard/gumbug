@@ -3,12 +3,12 @@ package pbt.humbug.model;
 public class Game implements Model {
     @Override
     public Board getBoard() {
-        return null;
+        return Board.getInitialBoard();
     }
 
     @Override
     public Animal[] getAnimals() {
-        return new Animal[0];
+        return new Animal[]{new Snail(new Position(0, 0))};
     }
 
     @Override

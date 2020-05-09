@@ -9,7 +9,7 @@ public class Snail extends Animal {
     public Position move(Board board, Direction direction, Animal... animals) {
         Position newPosition = new Position(getPositionOnBoard().getRow() + direction.getDeltaRow(),
                 getPositionOnBoard().getColumn() + direction.getDeltaColumn());
-        if (board.isInside(newPosition)) {
+        if (!board.isInside(newPosition)) {
             this.setPositionOnBoard(null);
             return null;
         }
