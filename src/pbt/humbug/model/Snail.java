@@ -16,15 +16,14 @@ public class Snail extends Animal {
         for (Animal animal : animals) {
             if (!animal.equals(this) && animal.getPositionOnBoard().equals(newPosition) && !animal.isOnStar()) {
                 return this.getPositionOnBoard();
-            } else {
-                Square newPositionSquare = board.getSquares()[newPosition.getRow()][newPosition.getColumn()];
-                if (newPositionSquare.getSquareType().equals(SquareType.STAR)) {
-                    this.setOnStar(true);
-                }
-                this.setPositionOnBoard(newPosition);
-                return newPosition;
             }
         }
-        return null;
+        Square newPositionSquare = board.getSquares()[newPosition.getRow()][newPosition.getColumn()];
+        if (newPositionSquare.getSquareType().equals(SquareType.STAR)) {
+            this.setOnStar(true);
+            newPositionSquare = new Square(SquareType.GRASS);
+        }
+        this.setPositionOnBoard(newPosition);
+        return newPosition;
     }
 }
