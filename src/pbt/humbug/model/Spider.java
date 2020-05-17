@@ -1,7 +1,5 @@
 package pbt.humbug.model;
 
-import javafx.geometry.Pos;
-
 import java.util.List;
 
 import static java.util.Arrays.stream;
