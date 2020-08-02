@@ -1,4 +1,4 @@
-package pbt.humbug.model;
+package main.pbt.humbug.model;
 
 public class Snail extends Animal {
     public Snail(Position positionOnBoard) {

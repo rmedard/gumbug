@@ -1,6 +1,6 @@
-package pbt.humbug.model.view.text;
+package main.pbt.humbug.model.view.text;
 
-import pbt.humbug.model.*;
+import main.pbt.humbug.model.*;
 
 import java.util.Scanner;
 
@@ -8,15 +8,6 @@ public class View implements InterfaceView {
 
     public static final String ANSI_GREEN_BACKGROUND = "\u001B[42m"; //Green 42
     public static final String ANSI_RESET = "\u001B[0m";
-
-    public static void main(String[] args) {
-        View view = new View();
-        view.displayBoard(Board.getInitialBoard());
-        Position position = view.askPosition();
-        Direction direction = view.askDirection();
-        System.out.println(position.toString());
-        System.out.println(direction.toString());
-    }
 
     @Override
     public void displayBoard(Board board, Animal... animals) {

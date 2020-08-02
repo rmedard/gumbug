@@ -1,4 +1,4 @@
-package pbt.humbug.model;
+package main.pbt.humbug.model;
 
 public class Direction {
     private int deltaRow;
@@ -12,6 +12,14 @@ public class Direction {
     public Direction(int deltaRow, int deltaColumn) {
         this.deltaRow = deltaRow;
         this.deltaColumn = deltaColumn;
+    }
+
+    public Direction opposite() {
+        if (this.equals(NORTH) || this.equals(SOUTH)) {
+            return this.equals(NORTH) ? SOUTH : NORTH;
+        } else {
+            return this.equals(WEST) ? EAST : WEST;
+        }
     }
 
     public int getDeltaRow() {

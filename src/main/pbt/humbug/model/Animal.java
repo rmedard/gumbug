@@ -1,4 +1,4 @@
-package pbt.humbug.model;
+package main.pbt.humbug.model;
 
 public abstract class Animal {
     private Position positionOnBoard;

@@ -1,4 +1,4 @@
-package pbt.humbug.model;
+package main.pbt.humbug.model;
 
 import org.junit.Assert;
 import org.junit.Test;

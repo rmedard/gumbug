@@ -1,4 +1,4 @@
-package pbt.humbug.model;
+package main.pbt.humbug.model;
 
 import java.util.List;
 

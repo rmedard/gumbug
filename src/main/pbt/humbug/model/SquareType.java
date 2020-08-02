@@ -1,4 +1,4 @@
-package pbt.humbug.model;
+package main.pbt.humbug.model;
 
 /**
  * SquareType represents the type of a square on the board.

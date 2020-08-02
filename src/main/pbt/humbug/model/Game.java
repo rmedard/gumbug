@@ -1,4 +1,6 @@
-package pbt.humbug.model;
+package main.pbt.humbug.model;
+
+import java.util.Arrays;
 
 public class Game implements Model {
     @Override
@@ -18,7 +20,7 @@ public class Game implements Model {
 
     @Override
     public boolean levelIsOver() {
-        return false;
+        return Arrays.stream(this.getAnimals()).allMatch(Animal::isOnStar);
     }
 
     @Override
