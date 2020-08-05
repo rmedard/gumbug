@@ -14,9 +14,13 @@ public class Spider extends Animal {
     public Position move(Board board, Direction direction, Animal... animals) {
         List<Animal> otherAnimals = stream(animals).filter(animal -> !animal.equals(this)).collect(toList());
         Position nextPosition = nextPosition(this.getPositionOnBoard(), board, direction, otherAnimals);
-        if (nextPosition != null && board.getSquares()[nextPosition.getRow()][nextPosition.getColumn()].getSquareType().equals(SquareType.STAR)) {
-            this.setOnStar(true);
-            board.getSquares()[nextPosition.getRow()][nextPosition.getColumn()] = new Square(SquareType.GRASS);
+        if (nextPosition == null) {
+            this.setPositionOnBoard(null);
+        } else {
+            if (board.getSquares()[nextPosition.getRow()][nextPosition.getColumn()].getSquareType().equals(SquareType.STAR)) {
+                this.setOnStar(true);
+                board.getSquares()[nextPosition.getRow()][nextPosition.getColumn()] = new Square(SquareType.GRASS);
+            }
         }
         return nextPosition;
     }
