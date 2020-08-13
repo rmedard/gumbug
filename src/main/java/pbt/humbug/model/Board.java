@@ -3,7 +3,7 @@ package pbt.humbug.model;
 public class Board {
     private final Square[][] squares;
 
-    public Board(Square[][] squares) {
+    Board(Square[][] squares) {
         this.squares = squares;
     }
 
